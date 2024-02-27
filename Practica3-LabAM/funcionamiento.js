@@ -1,44 +1,26 @@
-const form = document.getElementById('form');
-const usuario = document.getElementById('usuario');
-const contrasenia = document.getElementById('contraseña');
+const producto = document.getElementById("articulo-html");
+const pago = document.getElementById("monto-html");
+const texto = document.getElementById("articulos");
 
 
- form.addEventListener( 'submit', ev => {
-     ev.preventDefault();
-     validateInputs();
- } );
+var monto = 0;
+var articulo = '';
+var total = 0;
 
 
-const setError = message => {
-    const errorDisplay = document.getElementById("salida");
-   errorDisplay.innerText = message;
-};
+function ticketCompra() {
+    const nuevo_parrafo = document.createElement("p");
 
-const validateInputs = () => {
-    const usuarioValue = usuario.value.trim();
-    const contraseniaValue = contrasenia.value.trim();
+    articulo = producto.value;
+    monto = parseInt(pago.value);
 
-    if( usuarioValue === '' && contraseniaValue === ''){
-        setError("Nombre de usuario y contraseña requeridas");
-    } else if( usuarioValue === '' ) {
-        setError('Nombre de usuario requerido');
-    } else if( contraseniaValue === '') {
-        setError('Contraseña requerida');
-    }
-}
+    nuevo_parrafo.innerText = articulo + " . . . . . . . .  $" + monto;
+    texto.appendChild(nuevo_parrafo);
 
-function login() {
-    const username = document.getElementById('usuario').value;
-    success('Inicio de sesion correcto ' + username);
-}
+    total += monto;
 
-function register() {
-    const username = document.getElementById('usuario').value;
-    success('Registro exitoso ' + username);
-}
+    document.getElementById("Total").innerText = "Total : $" + total + " pesos";
 
-function success( message) {
-
-    const messageDiv = document.getElementById('salida');
-    messageDiv.innerHTML = message;
+    producto.value = '';
+    pago.value = '';
 }
