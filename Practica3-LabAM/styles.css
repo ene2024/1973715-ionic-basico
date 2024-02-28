@@ -3,24 +3,10 @@
     height: 100%;
 }
 
-.texto {
-    font-size: 30px;
-    background-color: darkmagenta;
-    color:#FFFFFF;
-    border-radius: 6px;
+ion-col  {
+    background-color: #000000;
+    border: solid 1px #ffffff;
+    color: #ffffff;
     text-align: center;
-    padding: 6px 0 6px 0;
 }
 
-#articulos {
-    font-size: 20px;
-    color: darkmagenta;
-}
-
-#Total {
-    font-size: 20px;
-}
-
-section {
-    min-height: 100vh;
-}
