@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
 
 @NgModule({
-  declarations: [AppComponent, ListaAlumnosComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
