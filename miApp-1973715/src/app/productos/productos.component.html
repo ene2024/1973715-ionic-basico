@@ -1,11 +1,12 @@
-<div *ngFor="let producto of productos">
-  <!--pre>{{ producto | json }}</pre-->
-  <p>Producto: {{ producto.title }}</p>
-  <br>
-</div>
 
-<!--div *ngFor="let producto of productos">
-  <div *ngFor="let atributo of obtenerAtributos(producto)">
-    <p>{{ atributo }}: {{ producto[atributo] }}</p>
-  </div>
-</div-->
+  <router-outlet></router-outlet>
+  <p>Productos: </p>
+  <ion-card *ngFor="let producto of productos">
+    <ion-card-title>{{producto.title}}</ion-card-title>
+    <ion-card-content>
+      <a [routerLink]="['/productoDetalles', producto.id]">Ir a Detalle</a>
+    </ion-card-content>
+  </ion-card>
+
+
+

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ProductosComponent } from './productos/productos.component';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 
 const routes: Routes = [
   {
@@ -8,8 +10,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/productos ',
     pathMatch: 'full'
+  },
+  {
+    path:'productos',
+    component: ProductosComponent
+  },
+  {
+    path: 'productoDetalles/:id',
+    component: ProductoDetalleComponent
   },
 ];
 

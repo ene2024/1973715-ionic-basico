@@ -17,8 +17,7 @@ import { ProductosComponent } from '../productos/productos.component';
   ],
   declarations: [
     HomePage,
-    ListaAlumnosComponent,
-    ProductosComponent
+    ListaAlumnosComponent
   ]
 })
 export class HomePageModule {}

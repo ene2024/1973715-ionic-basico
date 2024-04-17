@@ -19,12 +19,7 @@ export class ProductosComponent  implements OnInit {
   obtenerProductos(): void{ 
 
     this.consulta.getProductos().subscribe((resp: Object) => {
-      console.log(resp);
       this.productos = resp as any[];
     });
   }
-
-  /*obtenerAtributos(objeto: any): string[] {
-    return Object.keys(objeto);
-  }*/
 }
