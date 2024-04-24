@@ -11,10 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductosComponent } from './productos/productos.component';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 import { ListaAlumnosComponent } from './lista-alumnos/lista-alumnos.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, ProductosComponent, ProductoDetalleComponent  ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, ProductosComponent, ProductoDetalleComponent, ListaAlumnosComponent ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

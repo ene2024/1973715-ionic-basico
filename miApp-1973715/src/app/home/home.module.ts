@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { ListaAlumnosComponent } from '../lista-alumnos/lista-alumnos.component';
+//import { ListaAlumnosComponent } from '../lista-alumnos/lista-alumnos.component';
 import { ProductosComponent } from '../productos/productos.component';
 
 @NgModule({
@@ -17,7 +17,7 @@ import { ProductosComponent } from '../productos/productos.component';
   ],
   declarations: [
     HomePage,
-    ListaAlumnosComponent
+  //  ListaAlumnosComponent
   ]
 })
 export class HomePageModule {}
