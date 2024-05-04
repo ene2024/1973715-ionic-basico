@@ -1,3 +1,10 @@
 <ion-button (click)="tomarFoto()">
-  Tomate una foto :D
+  <p>Tomate una foto :D</p> <ion-icon name="camera" color="purple"></ion-icon>
 </ion-button>
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" size-md="6" size-lg="3" *ngFor="let foto of fotos; index as i">
+      <img [src]="foto.webViewPath" alt="">
+    </ion-col>
+  </ion-row>
+</ion-grid>
